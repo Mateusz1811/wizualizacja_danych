@@ -72,7 +72,22 @@ def main():
                 x += 1
         print("Parzyste liczby to:", liczby)
 
-    zad7()
+    def zad8():
+        lista = [1, 'a', 2, 'b', 3, 'd', 1, 2, 3]
+        slownik = {}
+        for i in lista:
+            if i in slownik:
+                slownik[i] += 1
+            else:
+                slownik[i] = 1
+        usun = [key for key in slownik.keys() if not isinstance((key, (int, float)))]
+        for key in usun:
+            del slownik[key]
+        print(slownik)
+
+        zad8()
+
+
 
 
 
