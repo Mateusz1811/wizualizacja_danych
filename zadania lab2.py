@@ -6,9 +6,8 @@ def main():
         x = input("Podaj zdanie: ")
         print(len(x))
 
-
-
     zad1()
+
 
     def zad2():
         system.stdout.write("Podaj 1 liczbę cąłkowitą: ")
@@ -17,10 +16,12 @@ def main():
         b = int(system.stdin.readline())
         system.stdout.write("Podaj 3 liczbe calkowita: ")
         c = int(system.stdin.readline())
-        wynik = (a**b) + c
+        wynik = (a ** b) + c
         system.stdout.write(f"{wynik}")
 
     zad2()
+
+
     def zad3():
         napis = input("Podaj napis do sprawdzenia: ").lower()
         if napis == napis[::-1]:
@@ -28,7 +29,10 @@ def main():
         else:
             print("Ten napis nie jest palindromem")
 
+
     zad3()
+
+
     def zad4():
         liczba = int(input("Podaj liczbę do sprawdzenia: "))
         if liczba <= 1:
@@ -38,9 +42,10 @@ def main():
                 print("To nie jest liczba pierwsza")
                 break
         else:
-            print("To jest liczba pierwsza")
+            print("To nie jest liczba pierwsza")
+        zad4()
 
-    zad4()
+
     def zad5():
         ilosc = 0
         for i in range(1, 1001):
@@ -52,7 +57,9 @@ def main():
                 ilosc += 1
         return ilosc
 
+
     zad5()
+
 
     def zad6():
         liczby = [1, 2.5, 3, 4.7, 5, 6.2]
@@ -61,7 +68,11 @@ def main():
 
         print("Pierwotne liczby:", liczby)
         print("Liczby podniesione do kwadratu:", liczby_do_kwadratu)
+
+
     zad6()
+
+
     def zad7():
         liczby = []
         x = 0
@@ -72,6 +83,7 @@ def main():
                 x += 1
         print("Parzyste liczby to:", liczby)
 
+
     def zad8():
         lista = [1, 'a', 2, 'b', 3, 'd', 1, 2, 3]
         slownik = {}
@@ -80,17 +92,13 @@ def main():
                 slownik[i] += 1
             else:
                 slownik[i] = 1
-        usun = [key for key in slownik.keys() if not isinstance((key, (int, float)))]
+        usun = [key for key in slownik.keys() if not isinstance(key, (int, float))]
         for key in usun:
             del slownik[key]
         print(slownik)
 
-        zad8()
 
-
-
-
-
+    zad8()
 
 if __name__ == "__main__":
     main()
