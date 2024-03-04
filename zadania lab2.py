@@ -41,6 +41,40 @@ def main():
             print("To jest liczba pierwsza")
 
     zad4()
+    def zad5():
+        ilosc = 0
+        for i in range(1, 1001):
+            suma = 0
+            for j in range(1, i):
+                if i % j == 0:
+                    suma += j
+            if i == suma:
+                ilosc += 1
+        return ilosc
+
+    zad5()
+
+    def zad6():
+        liczby = [1, 2.5, 3, 4.7, 5, 6.2]
+
+        liczby_do_kwadratu = [x ** 2 for x in liczby]
+
+        print("Pierwotne liczby:", liczby)
+        print("Liczby podniesione do kwadratu:", liczby_do_kwadratu)
+    zad6()
+    def zad7():
+        liczby = []
+        x = 0
+        while x < 10:
+            liczba = int(input("Podaj liczbę: "))
+            if liczba % 2 == 0:
+                liczby.append(liczba)
+                x += 1
+        print("Parzyste liczby to:", liczby)
+
+    zad7()
+
+
 
 
 if __name__ == "__main__":
