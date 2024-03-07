@@ -1,38 +1,38 @@
-# import random
+import random
 import math
-#
-# A = {1 - x for x in range(1, 11)}
-# B = {x**2 for x in range(1, 7)}
-# C = {x for x in B if x % 2 == 0}
-#
-# lista1 = [random.randint(1, 100) for i in range(10)]
-# nowa_lista = [x for x in lista1 if x % 2 == 0]
-# print("Lista1:", lista1)
-# print("Nowa_lista (tylko parzyste elementy):", nowa_lista)
 
-# produkty = {
-#     "jajka": "sztuki",
-#     "bułki": "sztuki",
-#     "mleko": "litry",
-#     "ser": "gramy",
-#     "ziemniaki": "kg",
-#     "cebula": "kg"
-# }
-#
-# produkty_sztuki = [produkt for produkt, jednostka in produkty.items() if jednostka == "sztuki"]
-#
-# print("Słownik produktów spożywczych:", produkty)
-# print("Produkty, których wartośćią są sztuki to:", produkty_sztuki)
-#
-# def trojkat_prostokatny(a, b, c):
-#     if a**2 + b**2 == c**2:
-#         return True
-#     else:
-#         return False
-#
-# print(trojkat_prostokatny(3, 4, 5))
-# print(trojkat_prostokatny(5,12,13))
-# print(trojkat_prostokatny(3,5,7))
+A = {1 - x for x in range(1, 11)}
+B = {x**2 for x in range(1, 7)}
+C = {x for x in B if x % 2 == 0}
+
+lista1 = [random.randint(1, 100) for i in range(10)]
+nowa_lista = [x for x in lista1 if x % 2 == 0]
+print("Lista1:", lista1)
+print("Nowa_lista (tylko parzyste elementy):", nowa_lista)
+
+produkty = {
+    "jajka": "sztuki",
+    "bułki": "sztuki",
+    "mleko": "litry",
+    "ser": "gramy",
+    "ziemniaki": "kg",
+    "cebula": "kg"
+}
+
+produkty_sztuki = [produkt for produkt, jednostka in produkty.items() if jednostka == "sztuki"]
+
+print("Słownik produktów spożywczych:", produkty)
+print("Produkty, których wartośćią są sztuki to:", produkty_sztuki)
+
+def trojkat_prostokatny(a, b, c):
+    if a**2 + b**2 == c**2:
+        return True
+    else:
+        return False
+
+print(trojkat_prostokatny(3, 4, 5))
+print(trojkat_prostokatny(5,12,13))
+print(trojkat_prostokatny(3,5,7))
 
 def pole_trapezu(a=0, b=0, h=0):
     return 0.5 * (a + b) * h
