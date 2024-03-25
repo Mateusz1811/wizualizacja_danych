@@ -1,5 +1,5 @@
 import numpy as np
-
+"""
 a = np.array([0, 1])
 print(a)
 
@@ -131,8 +131,67 @@ cols = np.array([[0, 2], [0, 2]])
 y = x[rows, cols]
 print(y)
 
+a = np.loadtxt('tekst.txt', dtype=int)
+print(a)
+print(a.shape)
+for i in range(a.shape[0]):
+    lista = []
+    for j in range(a.shape[1]):
+        lista.append(a[j][i])
+    print(max(lista))
+"""
+a = np.arange(3 ,3*16, 3)
+print(a)
 
+lista_float = [1.5, 2.7, 3.8, 4.2, 5.1]
+tablica_float = np.array(lista_float)
+tablica_int64 = tablica_float.astype(np.int64)
+print(lista_float)
+print(tablica_int64)
 
+def zad3(n):
+    tablica = np.arange(1, n*n+1).reshape(n, n)
+    return tablica
 
+n = 4
+wynik = zad3(n)
+print(wynik)
 
+def zad4(podstawa, ilosc_poteg):
+    potegi = np.logspace(base=podstawa, start=1, stop=ilosc_poteg, num=ilosc_poteg, dtype='int32')
+    return potegi
 
+print(zad4(2, 4))
+
+def zad5(dlugosc):
+    wektor = np.arange(dlugosc, 0, -1)
+    macierz = np.diag(wektor)
+    return macierz
+
+print(zad5(5))
+
+def zad6(macierz):
+    n, m = macierz.shape
+    print("Slowa w kolumnach: ")
+    for j in range(m):
+        slowo = ''
+        for i in range(n):
+            slowo += macierz[i][j]
+        print(slowo)
+    print("\nSlowa w wierszach: ")
+    for i in range(n):
+        slowo = ''
+        for j in range(m):
+            slowo += macierz[i][j]
+        print(slowo)
+    print("\nSlowo po ukosie:")
+    slowo = ''
+    for i in range(min(n, m)):
+        slowo += macierz[i][i]
+    print(slowo)
+
+    print("\nSlowo po ukosie (od prawej do lewej): ")
+    slowo = ''
+    for i in range(min(n, m)):
+        slowo += macierz[i][m - i -1]
+    print(slowo)
