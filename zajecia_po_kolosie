@@ -1,0 +1,18 @@
+Do 1
+math.sin(n)
+math.e
+math.log(24,2)
+
+Do 2
+a = len(<1,20>)
+random.randint(1,20)
+ile, n > 0
+ile > a*n:
+  return
+else
+
+do 4
+for i in range(0, len(lista[0]))
+tmp = []
+for j in range(0,len(lista0)
+tmp.append(lista[j][i])
